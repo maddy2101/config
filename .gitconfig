@@ -1,0 +1,70 @@
+[user]
+	name = Anja Leichsenring
+	email = aleichsenring@ab-softlab.de
+[alias]
+	st = status
+	ci = commit
+	br = branch
+	co = checkout
+	df = diff
+	fa = fetch --all
+	lg = log -p
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ls = ls-files
+	logo = log --graph --decorate --pretty='format:%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+	rs = reset --hard origin/master
+	sub = submodule foreach 'git rs && git co master && git pull'
+	showme = show --pretty="format:" --name-only
+	ciaa = commit -a --amend
+
+[url "ssh://maddy2101@review.typo3.org:29418"]
+	pushInsteadOf = git://git.typo3.org
+
+[branch]
+	autosetuprebase = always
+
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+	rebase = true
+
+[credential]
+	helper = cache
+
+[rerere]
+	enabled = 1
+
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+
+[core]
+	pager = less -FRSX
+	whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[apply]
+	whitespace = fix
