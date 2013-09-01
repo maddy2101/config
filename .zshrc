@@ -37,11 +37,10 @@ source $ZSH/oh-my-zsh.sh
 export PATH=/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
 alias storm='/home/maddy/PhpStorm/bin/phpstorm.sh &'
-alias ssh_haldir='ssh maddy@haldir.ab-softlab.de'
-alias ssh_euve='ssh maddy@62.75.244.247'
-alias sshfs_town_haldir='sshfs maddy@haldir.ab-softlab.de:/home/maddy/web/townportal2.ab-softlab.de/htdocs /home/maddy/mountpoints/townportal -o uid=500 -o gid=500 -o reconnect -o nonempty'
+alias sshfs_town='sshfs maddy@rivendell.ab-softlab.de:/var/www/ab-softlab.de/vhosts/townportal/htdocs /home/maddy/mountpoints/townportal -o uid=500 -o gid=500 -o reconnect -o nonempty'
+alias sshfs_town2='sshfs maddy@rivendell.ab-softlab.de:/var/www/ab-softlab.de/vhosts/townportal2/htdocs /home/maddy/mountpoints/townportal2 -o uid=500 -o gid=500 -o reconnect -o nonempty'
+alias sshfs_town3='sshfs maddy@rivendell.ab-softlab.de:/var/www/ab-softlab.de/vhosts/townportal3/htdocs /home/maddy/mountpoints/townportal3 -o uid=500 -o gid=500 -o reconnect -o nonempty'
 alias phpunitrun_full='php $PWD/typo3/cli_dispatch.phpsh phpunit -c typo3/sysext/core/Build/UnitTests.xml'
-alias sshfs_town_euve='sshfs maddy@62.75.244.247:/var/www/townportal.ab-softlab.de /home/maddy/mountpoints/townportal -o uid=500 -o gid=500 -o reconnect -o nonempty'
 alias phpunitrun_frontend='php $PWD/typo3/cli_dispatch.phpsh phpunit backupGlobals="true" colors="true" typo3/sysext/frontend/Tests/Unit'
 alias phpunitrun_backend='php $PWD/typo3/cli_dispatch.phpsh phpunit typo3/sysext/backend/Tests/Unit'
 alias phpunitrun_core='php $PWD/typo3/cli_dispatch.phpsh phpunit typo3/sysext/core/Tests/Unit'
